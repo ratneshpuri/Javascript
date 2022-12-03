@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Letter counter</title>
+    
+</head>
+<body>
+    <h2>Live letter counter</h2>
+    <input id="count" maxlength="200" type="text">
+    <p id="ks" style="display: inline-block;">Words left </p>
+    <b id="word-left">10</b>
+    
+</body>
+<script>
+    const ele1=  document.getElementById('count');
+    console.log(ele1);
+    ele1.addEventListener("input",() =>{
+        const word = ele1.value.trim();
+        console.log(word);
+        const wordCount = word.length;
+        console.log(wordCount);
+        if(wordCount > 10){
+            document.getElementById("ks").innerHTML = 'Word limit exceeded';
+            document.getElementById('ks').style.color = 'red';
+            document.getElementById('word-left').style.color = 'red';
+        }else{
+            document.getElementById("ks").innerHTML = 'Words left';
+            document.getElementById("word-left").innerHTML = 10-wordCount;
+            document.getElementById('ks').style.color = 'black';
+            document.getElementById('word-left').style.color = 'black';
+
+        }
+    })
+</script>
+</html>
