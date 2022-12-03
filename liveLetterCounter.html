@@ -16,9 +16,7 @@
     console.log(ele1);
     ele1.addEventListener("input",() =>{
         const word = ele1.value.trim();
-        console.log(word);
         const wordCount = word.length;
-        console.log(wordCount);
         if(wordCount > 10){
             document.getElementById("ks").innerHTML = 'Word limit exceeded';
             document.getElementById('ks').style.color = 'red';
